@@ -1,2 +1,2 @@
 ﻿User-agent: *
-Sitemap: http://sipsmos.itsinsta.site/sitemap.xml
+Sitemap: https://sipsmos.ru/sitemap.xml
