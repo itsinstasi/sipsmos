@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/style.css"/>
     
     <meta name="description" content="Столичный Институт Подготовки Специалистов">
-    <meta name="keywords" content="сипс юдрайв проекты отзывы услуги клиенты партнеры птм команда студенты" />
+    <meta name="keywords" content="сипс юдрайв проекты отзывы услуги клиенты партнеры птм команда сту денты" />
     
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -42,6 +42,9 @@
     <meta property="og:description" content="Столичный Институт Подготовки Специалистов" />
     <meta property="og:locale" content="Ru-ru" />
     <meta property="og:site_name" content="sipsmos" />
+
+    <!--modernizr-->
+	<script src="js/vendors/modernizr-custom.js"></script>
 </head>
 <body>
     <!--[if lt IE 8]>
@@ -58,7 +61,7 @@
 				<div class="main-sec__wrap">
 					<div class="main-sec__logo">
 						<div class="main-sec__logo-pic">
-							<img src="https://scontent-arn2-2.cdninstagram.com/vp/817b96264a10b3f24c49a98846f7cc90/5E1C363B/t51.2885-19/s150x150/70523050_412652296059563_9194765411474735104_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com" alt="СИПС Москва">
+							<img src="https://scontent-arn2-2.cdninstagram.com/vp/bf544072e97422300bc0d7fc6d1e6487/5E43C33B/t51.2885-19/s150x150/70523050_412652296059563_9194765411474735104_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com" alt="СИПС Москва">
 						</div>
 					</div>
 					<div class="main-sec__txt">
@@ -69,12 +72,16 @@
 									<div class="main-sec__contacts-btn" id="js-cont-list-btn" onclick="document.getElementById('js-cont-list').classList.toggle('open');">Сообщение</div>
 									<ul class="main-sec__contacts-list">
 										<li><a href="https://wa.me/79250908274" 
+										onclick="ym(55778596, 'reachGoal', 'WhatsApp'); return true;"
 										target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
 										<li><a href="tg://resolve?domain=Avtormirov" 
+										onclick="ym(55778596, 'reachGoal', 'Telegram'); return true;"
 										target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i> Telegram</a></li>
 										<li><a href="viber://add?number=79250908274" 
+										onclick="ym(55778596, 'reachGoal', 'Viber'); return true;"
 										target="_blank"><i class="fa fa-phone-square" aria-hidden="true"></i> Viber</a></li>
 										<li><a href="https://www.instagram.com/sipsmos" 
+										onclick="ym(55778596, 'reachGoal', 'Instagram'); return true;"
 										target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
 									</ul>
 								</div>
@@ -91,38 +98,43 @@
 				</div>
 			</div>
 		</div>
-		<div class="stories" style="display: none;">
-				<div class="container">
+		<div class="stories">
+			<div class="container">
+				<div class="stories__slider-wrap">
 					<div class="stories__slider" id="js-stories-slider">
-						<div>
-							<div class="stories__slide" title="сипс">
-								<a href="./tags/./sips.html">
-									<div class="stories__slide-pic"><img src="./img/og/sips.png" alt="сипс"></div>
-									<div class="stories__slide-txt">сипс</div>
-								</a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="stories__slide" title="сипс">
+									<a href="./tags/./sips.html">
+										<div class="stories__slide-pic" style="background-image: url(./img/og/sips.png);"></div>
+										<div class="stories__slide-txt">сипс</div>
+									</a>
+								</div>
 							</div>
-						</div>
-						<div>
-							<div class="stories__slide" title="юдрайв">
-								<a href="./tags/./yudrayv.html">
-									<div class="stories__slide-pic"><img src="./img/og/yudrayv.png" alt="юдрайв"></div>
-									<div class="stories__slide-txt">юдрайв</div>
-								</a>
+							<div class="swiper-slide">
+								<div class="stories__slide" title="юдрайв">
+									<a href="./tags/./yudrayv.html">
+										<div class="stories__slide-pic" style="background-image: url(./img/og/yudrayv.png);"></div>
+										<div class="stories__slide-txt">юдрайв</div>
+									</a>
+								</div>
 							</div>
-						</div>
-						<div>
-							<div class="stories__slide" title="проекты">
-								<a href="./tags/./proekty.html">
-									<div class="stories__slide-pic"><img src="./img/og/proekty.png" alt="проекты"></div>
-									<div class="stories__slide-txt">проекты</div>
-								</a>
+							<div class="swiper-slide">
+								<div class="stories__slide" title="проекты">
+									<a href="./tags/./proekty.html">
+										<div class="stories__slide-pic" style="background-image: url(./img/og/proekty.png);"></div>
+										<div class="stories__slide-txt">проекты</div>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
+					<div class="stories__arrow stories__arrow--prev" id="js-stories-prev"></div>
+					<div class="stories__arrow stories__arrow--next" id="js-stories-next"></div>
 				</div>
 			</div>
 		</div>
-		<div class="items">
+		<div class="items" id="js-items">
 			<div class="container">
 				<div class="items-bar">
 					<button class="btn items-bar__btn active" id="js-grid"><i class="fa fa-th" aria-hidden="true"></i>Плитка</button>
@@ -133,7 +145,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashproekty.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="https://scontent-arn2-2.cdninstagram.com/vp/7e416ec281fffa4156f415c3ba21bd8f/5E2CB225/t51.2885-15/e35/69792182_2250805005042399_3919163123238081030_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=103" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="js-now-lazy" src="https://scontent-arn2-2.cdninstagram.com/vp/7e416ec281fffa4156f415c3ba21bd8f/5E2CB225/t51.2885-15/e35/69792182_2250805005042399_3919163123238081030_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=103" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -155,7 +167,7 @@
 					<div class="items-item">
 						<a href="./posts/./otzyv-1.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="https://scontent-arn2-2.cdninstagram.com/vp/217e5e3cbaf99f68e78acdccbcfacfde/5E40109A/t51.2885-15/e35/69929582_776196836145584_979436448307279854_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=108" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Отзыв 1:">
+								<img class="js-now-lazy" src="https://scontent-arn2-2.cdninstagram.com/vp/217e5e3cbaf99f68e78acdccbcfacfde/5E40109A/t51.2885-15/e35/69929582_776196836145584_979436448307279854_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=108" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Отзыв 1:">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -177,7 +189,7 @@
 					<div class="items-item">
 						<a href="./posts/./deyatel-nost--po-montazhux-tekhnicheskomu-obsluzhivaniyu-i-remontu-sredstv-obespecheniya-pozharnoy-bezopasnos.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="https://scontent-arn2-2.cdninstagram.com/vp/e95cddd73ff516d67c92b894aaa4fa37/5E26EAF0/t51.2885-15/e35/s1080x1080/71531285_496111450939061_8619911407134451654_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=105" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Деятельность по монтажу, техническому обслуживанию и ремонту средств обеспечения пожарной безопасности зданий и сооружений">
+								<img class="js-now-lazy" src="https://scontent-arn2-2.cdninstagram.com/vp/e95cddd73ff516d67c92b894aaa4fa37/5E26EAF0/t51.2885-15/e35/s1080x1080/71531285_496111450939061_8619911407134451654_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=105" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Деятельность по монтажу, техническому обслуживанию и ремонту средств обеспечения пожарной безопасности зданий и сооружений">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -199,7 +211,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashsips.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="https://scontent-arn2-2.cdninstagram.com/vp/b079c3ece1ff471518e04ca724baa8f4/5E38A132/t51.2885-15/e35/s1080x1080/70120048_166475284504788_349608289529628802_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/f7754143707394c7c49580a7a0a9552e/5E602E32/t51.2885-15/e35/s1080x1080/70120048_166475284504788_349608289529628802_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -221,7 +233,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashklienty.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="https://scontent-arn2-2.cdninstagram.com/vp/c9f55b5c624a37e8eac38ec7996b806b/5E1CE78A/t51.2885-15/e35/71080520_663570730806180_3641419934082284893_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/a9b6d81e13a7d6ffa23c48c735f2fec5/5E44748A/t51.2885-15/e35/71080520_663570730806180_3641419934082284893_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -243,7 +255,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashproekty-1.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="https://scontent-arn2-2.cdninstagram.com/vp/d496806a211a5c9a2de78e3b354334a2/5E37F7A3/t51.2885-15/e35/s1080x1080/70671374_436095347025118_6844171243124039957_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=110" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/1f68a42fb667e395008c0d8de00156a1/5E5F84A3/t51.2885-15/e35/s1080x1080/70671374_436095347025118_6844171243124039957_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=110" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -265,7 +277,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashproekty-2.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/b17ea39007c220d9c7fb3c9f20f1cd85/5E3504C7/t51.2885-15/e35/69747764_524884071418193_2426804123441873902_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=105" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/b17ea39007c220d9c7fb3c9f20f1cd85/5E3504C7/t51.2885-15/e35/69747764_524884071418193_2426804123441873902_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=105" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -287,7 +299,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashsips-1.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/2dae54453a1199c812bc1ebb7b409b16/5E1B1265/t51.2885-15/e35/s1080x1080/70632377_141802483716349_3895332804904949759_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=101" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/82fb8b15c30b39112eac9690a6203757/5E429F65/t51.2885-15/e35/s1080x1080/70632377_141802483716349_3895332804904949759_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=101" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -309,7 +321,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashklienty-1.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/eb78c221e96ac7327846d8a714cc52ab/5E1E225D/t51.2885-15/e35/s1080x1080/71183978_372725666942127_5456844669671985909_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=103" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/eb78c221e96ac7327846d8a714cc52ab/5E1E225D/t51.2885-15/e35/s1080x1080/71183978_372725666942127_5456844669671985909_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=103" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -331,7 +343,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashsips-2.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/73142ab31303c00a45e2a01db4b0f09b/5E2A73C7/t51.2885-15/e35/s1080x1080/69521437_202297944137276_5481900142770218287_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=108" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/73142ab31303c00a45e2a01db4b0f09b/5E2A73C7/t51.2885-15/e35/s1080x1080/69521437_202297944137276_5481900142770218287_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=108" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -353,7 +365,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashsips-3.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/876953bbdfb2460942a2003f26b1db6f/5E213AD0/t51.2885-15/e35/s1080x1080/69851520_518916908678998_3681904512878100521_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=110" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/876953bbdfb2460942a2003f26b1db6f/5E213AD0/t51.2885-15/e35/s1080x1080/69851520_518916908678998_3681904512878100521_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=110" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -375,7 +387,7 @@
 					<div class="items-item">
 						<a href="./posts/./sertifikat-o-prokhozhdenii-obucheniya-xakademiyaxudrive.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/528c8df14502ef79326483a416d565eb/5E1AD49E/t51.2885-15/e35/s1080x1080/70964482_2379095635683656_737733389376358818_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=108" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Сертификат о прохождении обучения @akademiya_udrive">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/72d1ddc66626b3807f5b0d2486c11eda/5E42619E/t51.2885-15/e35/s1080x1080/70964482_2379095635683656_737733389376358818_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=108" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Сертификат о прохождении обучения @akademiya_udrive">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -397,7 +409,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashstudenty.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/4ee6cbcd79dd4bc4b08e3c3afdf9ae05/5E373D83/t51.2885-15/e35/70892429_463965904205992_3868593017641869353_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=104" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/4ee6cbcd79dd4bc4b08e3c3afdf9ae05/5E373D83/t51.2885-15/e35/70892429_463965904205992_3868593017641869353_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=104" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -419,7 +431,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashsips-4.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/93ec4d1ec3249f0668293b9cd61aa8ef/5E403A99/t51.2885-15/e35/71803717_736618790085106_601050930681218032_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=110" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/93ec4d1ec3249f0668293b9cd61aa8ef/5E403A99/t51.2885-15/e35/71803717_736618790085106_601050930681218032_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=110" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -441,7 +453,7 @@
 					<div class="items-item">
 						<a href="./posts/./otzyv-partnera.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/6fb00f4eeb6be3e9b32f9765f4708803/5E32363A/t51.2885-15/e35/s1080x1080/69772732_138672017410651_4781220508896601131_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=107" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Отзыв партнера">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/6fb00f4eeb6be3e9b32f9765f4708803/5E32363A/t51.2885-15/e35/s1080x1080/69772732_138672017410651_4781220508896601131_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=107" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Отзыв партнера">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -463,7 +475,7 @@
 					<div class="items-item">
 						<a href="./posts/./pozharno-tekhnicheskiy-minimum-xptmx.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/f753f4560e274b47df52ab5fd390712a/5E29C28B/t51.2885-15/e35/s1080x1080/70806007_2365160777057232_8381125870630101370_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Пожарно-технический минимум (ПТМ)!">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/f753f4560e274b47df52ab5fd390712a/5E29C28B/t51.2885-15/e35/s1080x1080/70806007_2365160777057232_8381125870630101370_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Пожарно-технический минимум (ПТМ)!">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -485,7 +497,7 @@
 					<div class="items-item">
 						<a href="./posts/./otzyv-partnera-1.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/6061789fd6d64e0b8c8b7a3c23291636/5E294F99/t51.2885-15/e35/s1080x1080/70088604_246483949645388_1920017580062506776_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=108" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Отзыв партнера">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/6061789fd6d64e0b8c8b7a3c23291636/5E294F99/t51.2885-15/e35/s1080x1080/70088604_246483949645388_1920017580062506776_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=108" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Отзыв партнера">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -507,7 +519,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashuslugi.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/8a5127bc30d1d7b6743ffff94a189bea/5E1ECA94/t51.2885-15/e35/s1080x1080/71327598_398357674116710_3481611052930128761_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=102" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/8a5127bc30d1d7b6743ffff94a189bea/5E1ECA94/t51.2885-15/e35/s1080x1080/71327598_398357674116710_3481611052930128761_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=102" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -529,7 +541,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashnapravleniya.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/3ac9b5426fbb096af0e7646ff65cdded/5E353826/t51.2885-15/e35/s1080x1080/71282280_1062884430581362_7029942257322833033_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=110" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/3ac9b5426fbb096af0e7646ff65cdded/5E353826/t51.2885-15/e35/s1080x1080/71282280_1062884430581362_7029942257322833033_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=110" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -551,7 +563,7 @@
 					<div class="items-item linked">
 						<a href="./posts/./rektor-sips-emel-yanov-filipp.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/836f8d46eb6f4fbcb81c3666b4f15963/5E34C86B/t51.2885-15/e35/s1080x1080/70913011_389721731695650_6485700187057450723_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=106" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Ректор СИПС Емельянов Филипп.">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/836f8d46eb6f4fbcb81c3666b4f15963/5E34C86B/t51.2885-15/e35/s1080x1080/70913011_389721731695650_6485700187057450723_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=106" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Ректор СИПС Емельянов Филипп.">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -573,7 +585,7 @@
 					<div class="items-item">
 						<a href="./posts/./kak-nauchit-sya-risovat-.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/2f88d798fc45d141a4c65f7307b4c271/5E2EE7C4/t51.2885-15/e35/71535198_448025015835469_7759724151263356676_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=101" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Как научиться рисовать?">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/2f88d798fc45d141a4c65f7307b4c271/5E2EE7C4/t51.2885-15/e35/71535198_448025015835469_7759724151263356676_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=101" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Как научиться рисовать?">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -595,7 +607,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashpartnery.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/93840093e2dad8fbfc777b7ac39f6ec2/5E2C38E7/t51.2885-15/e35/s1080x1080/69928808_157363852007664_870060563028745230_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/93840093e2dad8fbfc777b7ac39f6ec2/5E2C38E7/t51.2885-15/e35/s1080x1080/69928808_157363852007664_870060563028745230_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -617,7 +629,7 @@
 					<div class="items-item">
 						<a href="./posts/./o-chem-mozhet-mechtat--professional-nyy-voditel-.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/668d05d3944b4f1458a429f7c8f780b5/5E1E346F/t51.2885-15/e35/s1080x1080/72109356_2135755290063240_2548610261397404792_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="О чем может мечтать профессиональный водитель?">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/668d05d3944b4f1458a429f7c8f780b5/5E1E346F/t51.2885-15/e35/s1080x1080/72109356_2135755290063240_2548610261397404792_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="О чем может мечтать профессиональный водитель?">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -639,7 +651,7 @@
 					<div class="items-item">
 						<a href="./posts/./hashyudrayv-xakademiyaxudrive.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/36cbd1618fda946e9fe59b1647b145fc/5E27D4F2/t51.2885-15/e35/70539151_1032079086986578_7044604767650816486_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=110" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="@akademiya_udrive">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/36cbd1618fda946e9fe59b1647b145fc/5E27D4F2/t51.2885-15/e35/70539151_1032079086986578_7044604767650816486_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=110" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="@akademiya_udrive">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -661,7 +673,7 @@
 					<div class="items-item">
 						<a href="./posts/./dopolnitel-noe-obrazovanie-v-moskovskom-institute.html" class="items-item__wrap">
 							<div class="items-item__pic">
-								<img src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/34204a57be604444232e23bff9b413c2/5E227FBD/t51.2885-15/e35/69726871_143173016933966_1768334505235797906_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=102" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Дополнительное образование в Московском институте!">
+								<img class="" src="img/placeholder.png" data-src="https://scontent-arn2-2.cdninstagram.com/vp/34204a57be604444232e23bff9b413c2/5E227FBD/t51.2885-15/e35/69726871_143173016933966_1768334505235797906_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=102" onerror="this.onerror=null; this.src='img/placeholder.png'" alt="Дополнительное образование в Московском институте!">
 							</div>							
 							<div class="items-item__blind">
 								<div class="items-item__blind-wrap">
@@ -692,18 +704,21 @@
 				<div class="banner__main-title">Свяжитесь с нами</div>
 				<div class="banner__main-row">
 					<a href="https://wa.me/79250908274" target="_blank" 
+					onclick="ym(55778596, 'reachGoal', 'WhatsApp'); return true;"
 					class="banner__main-item">
 						<div class="banner__main-item-ring"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
 						<div class="banner__main-item-txt">WhatsApp</div>
 					</a>
 
 					<a href="tg://resolve?domain=Avtormirov" target="_blank" 
+					onclick="ym(55778596, 'reachGoal', 'Telegram'); return true;"
 					class="banner__main-item">
 						<div class="banner__main-item-ring"><i class="fa fa-telegram" aria-hidden="true"></i></div>
 						<div class="banner__main-item-txt">Telegram</div>
 					</a>
 
 					<a href="viber://add?number=79250908274" target="_blank" 
+					onclick="ym(55778596, 'reachGoal', 'Viber'); return true;"
 					class="banner__main-item">
 						<div class="banner__main-item-ring"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
 						<div class="banner__main-item-txt">Viber</div>
@@ -711,6 +726,7 @@
 
 
 					<a href="https://www.instagram.com/sipsmos" target="_blank" 
+					onclick="ym(55778596, 'reachGoal', 'Instagram'); return true;"
 					class="banner__main-item">
 						<div class="banner__main-item-ring"><i class="fa fa-instagram" aria-hidden="true"></i></div>
 						<div class="banner__main-item-txt">Instagram</div>
@@ -721,12 +737,28 @@
 		</div>			
 	</div>
 
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+   ym(55778596, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/55778596" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+	<!--swiper-->
+	<script src="js/vendors/swiper.min.js"></script>
 	<!--jQuery-->
 	<script src="js/vendors/jquery.min.js"></script>
-	<script src="js/vendors/jquery.loadScroll.js"></script>
-	<!--device-->
-	<script src="js/vendors/slick.min.js"></script>
+	<!--lazyloadxt-->
+	<script src="js/vendors/jquery.lazyloadxt.js"></script>
 	<!--init-->
 	<script src="js/jquery.init.js"></script>
 	<!--my scripts-->

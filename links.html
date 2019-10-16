@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>сипс юдрайв проекты отзывы услуги клиенты партнеры птм команда студенты</title>
+    <title>сипс юдрайв проекты отзывы услуги клиенты партнеры птм команда сту денты</title>
     
     <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/> 
@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/style.css"/>
     
     <meta name="description" content="СИПС Москва">
-    <meta name="keywords" content="сипс юдрайв проекты отзывы услуги клиенты партнеры птм команда студенты" />
+    <meta name="keywords" content="сипс юдрайв проекты отзывы услуги клиенты партнеры птм команда сту денты" />
     
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -30,6 +30,24 @@
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#fff">
 
+    <!--modernizr-->
+	<script src="js/vendors/modernizr-custom.js"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(55778596, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/55778596" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <!--[if lt IE 8]>
@@ -46,7 +64,7 @@
 				<div class="header__wrap">
 					<div class="header__left">
 						<a href="./main.html" class="header__logo">
-							<div class="header__logo-pic"><img src="https://scontent-arn2-2.cdninstagram.com/vp/817b96264a10b3f24c49a98846f7cc90/5E1C363B/t51.2885-19/s150x150/70523050_412652296059563_9194765411474735104_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com" alt="СИПС Москва"></div>
+							<div class="header__logo-pic"><img src="https://scontent-arn2-2.cdninstagram.com/vp/bf544072e97422300bc0d7fc6d1e6487/5E43C33B/t51.2885-19/s150x150/70523050_412652296059563_9194765411474735104_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com" alt="СИПС Москва"></div>
 							<div class="header__logo-txt">sipsmos</div>
 						</a>
 						<div class="header__title">СИПС Москва</div>
@@ -56,83 +74,97 @@
 		</header>	
 		<div class="main">
 
-			<div class="stories" style="display: none;">
-				<div class="container">
+		<div class="stories">
+			<div class="container">
+				<div class="stories__slider-wrap">
 					<div class="stories__slider" id="js-stories-slider">
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="сипс">
-								<a href="./tags/./sips.html">
-									<div class="stories__slide-pic"><img src="./img/og/sips.png" alt="сипс" /></div>
-									<div class="stories__slide-txt">сипс</div>
-								</a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="stories__slide" title="сипс">
+									<a href="./tags/./sips.html">
+										<div class="stories__slide-pic" style="background-image: url(./img/og/sips.png);"></div>
+										<div class="stories__slide-txt">сипс</div>
+									</a>
+								</div>
 							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="юдрайв">
-								<a href="./tags/./yudrayv.html">
-									<div class="stories__slide-pic"><img src="./img/og/yudrayv.png" alt="юдрайв" /></div>
-									<div class="stories__slide-txt">юдрайв</div>
-								</a>
+							<div class="swiper-slide">
+								<div class="stories__slide" title="юдрайв">
+									<a href="./tags/./yudrayv.html">
+										<div class="stories__slide-pic" style="background-image: url(./img/og/yudrayv.png);"></div>
+										<div class="stories__slide-txt">юдрайв</div>
+									</a>
+								</div>
 							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="проекты">
-								<a href="./tags/./proekty.html">
-									<div class="stories__slide-pic"><img src="./img/og/proekty.png" alt="проекты" /></div>
-									<div class="stories__slide-txt">проекты</div>
-								</a>
+							<div class="swiper-slide">
+								<div class="stories__slide" title="проекты">
+									<a href="./tags/./proekty.html">
+										<div class="stories__slide-pic" style="background-image: url(./img/og/proekty.png);"></div>
+										<div class="stories__slide-txt">проекты</div>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
+					<div class="stories__arrow stories__arrow--prev" id="js-stories-prev"></div>
+					<div class="stories__arrow stories__arrow--next" id="js-stories-next"></div>
 				</div>
 			</div>
+		</div>
 
 			<div class="links-page">
 				<div class="container">
-					<div class="links-page-list">
-						<div class="links-page-list__item">
-							<a href="./posts/./rektor-sips-emel-yanov-filipp.html" class="links-page-list__item-link" target="_blank">
-								<strong>Ректор СИПС Емельянов Филипп.</strong>
-							</a>
-						</div>
-					</div>
-					<div class="links-page-bar">
-						<div class="banner__main-title">Свяжитесь с нами</div>
-						<div class="links-page-bar__banner">
-							<div class="banner__main-row">
-								<a href="https://wa.me/79250908274" target="_blank" 
-								class="banner__main-item">
-									<div class="banner__main-item-ring"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
-									<div class="banner__main-item-txt">WhatsApp</div>
-								</a>
-								<a href="tg://resolve?domain=Avtormirov" target="_blank" 
-								class="banner__main-item">
-									<div class="banner__main-item-ring"><i class="fa fa-telegram" aria-hidden="true"></i></div>
-									<div class="banner__main-item-txt">Telegram</div>
-								</a>
-								<a href="viber://add?number=79250908274" target="_blank" 
-								class="banner__main-item">
-									<div class="banner__main-item-ring"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
-									<div class="banner__main-item-txt">Viber</div>
-								</a>
-								<a href="https://www.instagram.com/sipsmos" target="_blank" 
-								class="banner__main-item">
-									<div class="banner__main-item-ring"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-									<div class="banner__main-item-txt">Instagram</div>
-								</a>
-							</div>
-						</div>
+
+					<div class="links-page-title">СИПС Москва</div>
+
+					<div class="links-page-messagers">
+						<a href="https://wa.me/79250908274" target="_blank" 
+								onclick="ym(55778596, 'reachGoal', 'WhatsApp'); return true;"
+							class="links-page-messager">
+							<i class="fa fa-whatsapp" aria-hidden="true"></i>WhatsApp
+						</a>
+
+						<a href="tg://resolve?domain=Avtormirov" target="_blank" 
+								onclick="ym(55778596, 'reachGoal', 'Telegram'); return true;"
+							class="links-page-messager">
+							<i class="fa fa-telegram" aria-hidden="true"></i>Telegram
+						</a>
+
+						<a href="viber://add?number=79250908274" target="_blank" 
+								onclick="ym(55778596, 'reachGoal', 'Viber'); return true;"
+							class="links-page-messager">
+							<i class="fa fa-phone-square" aria-hidden="true"></i>Viber
+						</a>
+
+
+
+
+						<a href="https://www.instagram.com/sipsmos" target="_blank" class="links-page-messager">
+							<i class="fa fa-instagram" aria-hidden="true"></i>Instagram
+						</a>
 					</div>
 
+					<div class="links-page-list">
+						<a href="./posts/./rektor-sips-emel-yanov-filipp.html" class="links-page-btn" target="_blank">
+							<strong>Ректор СИПС Емельянов Филипп.</strong>
+						</a>
+
+
+					</div>
+
+					<div class="links-page-soc">
+						<a href="https://www.instagram.com/sipsmos" target="_blank" 
+								onclick="ym(55778596, 'reachGoal', 'Instagram'); return true;" 
+							class="links-page-soc__link" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					</div>
+					<div class="links-page-footer">@sipsmos рекомендует SHORTWAYTOPAY</div>
 				</div>
 			</div>	
 		</div>			
 	</div>
+	<!--swiper-->
+	<script src="js/vendors/swiper.min.js"></script>
 	<!--jQuery-->
 	<script src="js/vendors/jquery.min.js"></script>
-	<script src="js/vendors/jquery.loadScroll.js"></script>
-	<!--device-->
-	<script src="js/vendors/slick.min.js"></script>
 	<!--init-->
 	<script src="js/jquery.init.js"></script>
 	<!--my scripts-->

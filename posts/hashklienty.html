@@ -30,11 +30,11 @@
     <meta name="msapplication-TileImage" content="../img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#fff">
     
-    <link rel="image_src" href="https://scontent-arn2-2.cdninstagram.com/vp/c9f55b5c624a37e8eac38ec7996b806b/5E1CE78A/t51.2885-15/e35/71080520_663570730806180_3641419934082284893_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" />
+    <link rel="image_src" href="https://scontent-arn2-2.cdninstagram.com/vp/a9b6d81e13a7d6ffa23c48c735f2fec5/5E44748A/t51.2885-15/e35/71080520_663570730806180_3641419934082284893_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" />
     <meta name="robots" content="INDEX, FOLLOW" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sipsmos.ru/posts/hashklienty.html" />
-    <meta property="og:image" content="https://scontent-arn2-2.cdninstagram.com/vp/c9f55b5c624a37e8eac38ec7996b806b/5E1CE78A/t51.2885-15/e35/71080520_663570730806180_3641419934082284893_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" />
+    <meta property="og:image" content="https://scontent-arn2-2.cdninstagram.com/vp/a9b6d81e13a7d6ffa23c48c735f2fec5/5E44748A/t51.2885-15/e35/71080520_663570730806180_3641419934082284893_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1018"/>
     <meta property="og:image:height" content="1018"/>
@@ -43,6 +43,24 @@
     <meta property="og:locale" content="Ru-ru" />
     <meta property="og:site_name" content="sipsmos" />
 
+	<!--modernizr-->
+	<script src="../js/vendors/modernizr-custom.js"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(55778596, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/55778596" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <!--[if lt IE 8]>
@@ -54,12 +72,12 @@
 		Вам нужно включить JavaScript в своем браузере, чтобы  отображение этой страницы было корректно.
     </noscript>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header" id="js-header">
 			<div class="container">
 				<div class="header__wrap">
 					<div class="header__left">
 						<a href="../main.html" class="header__logo">
-							<div class="header__logo-pic"><img src="https://scontent-arn2-2.cdninstagram.com/vp/817b96264a10b3f24c49a98846f7cc90/5E1C363B/t51.2885-19/s150x150/70523050_412652296059563_9194765411474735104_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com" alt="СИПС Москва"></div>
+							<div class="header__logo-pic"><img src="https://scontent-arn2-2.cdninstagram.com/vp/bf544072e97422300bc0d7fc6d1e6487/5E43C33B/t51.2885-19/s150x150/70523050_412652296059563_9194765411474735104_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com" alt="СИПС Москва"></div>
 							<div class="header__logo-txt">sipsmos</div>
 						</a>
 						<div class="header__title">СИПС Москва</div>
@@ -68,33 +86,39 @@
 			</div>
 		</header>	
 		<div class="main">
-			<div class="stories" style="display: none;">
+			<div class="stories">
 				<div class="container">
-					<div class="stories__slider" id="js-stories-slider">
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="сипс">
-								<a href="../tags/./sips.html">
-									<div class="stories__slide-pic"><img src="../img/og/sips.png" alt="сипс" /></div>
-									<div class="stories__slide-txt">сипс</div>
-								</a>
+					<div class="stories__slider-wrap">
+						<div class="stories__slider" id="js-stories-slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="stories__slide" title="сипс">
+										<a href="../tags/./sips.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/sips.png);"></div>
+											<div class="stories__slide-txt">сипс</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="юдрайв">
+										<a href="../tags/./yudrayv.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/yudrayv.png);"></div>
+											<div class="stories__slide-txt">юдрайв</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="проекты">
+										<a href="../tags/./proekty.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/proekty.png);"></div>
+											<div class="stories__slide-txt">проекты</div>
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="юдрайв">
-								<a href="../tags/./yudrayv.html">
-									<div class="stories__slide-pic"><img src="../img/og/yudrayv.png" alt="юдрайв" /></div>
-									<div class="stories__slide-txt">юдрайв</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="проекты">
-								<a href="../tags/./proekty.html">
-									<div class="stories__slide-pic"><img src="../img/og/proekty.png" alt="проекты" /></div>
-									<div class="stories__slide-txt">проекты</div>
-								</a>
-							</div>
-						</div>
+						<div class="stories__arrow stories__arrow--prev" id="js-stories-prev"></div>
+						<div class="stories__arrow stories__arrow--next" id="js-stories-next"></div>
 					</div>
 				</div>
 			</div>
@@ -110,8 +134,10 @@
 						<div class="article__datas">
 							<div class="article__datas-item"><i class="fa fa-clock-o" aria-hidden="true"></i><time datetime="2019-09-30">30 September 2019</time></div>
 							<a href="https://www.instagram.com/p/B3C6PriJ5nI/" 
+								onclick="ym(55778596, 'reachGoal', 'Instagram'); return true;"
 								target="_blank" class="article__datas-item"><i class="fa fa-comment-o" aria-hidden="true"></i>0</a>
 							<a href="https://www.instagram.com/p/B3C6PriJ5nI/" 
+								onclick="ym(55778596, 'reachGoal', 'Instagram'); return true;"
 								target="_blank" class="article__datas-item"><i class="fa fa-heart" aria-hidden="true"></i>2</a>
 						</div>
 					</div>
@@ -119,15 +145,14 @@
 						<div class="article-main">
 							<div class="article-content">
 								<figure>
-									<img src="https://scontent-arn2-2.cdninstagram.com/vp/c9f55b5c624a37e8eac38ec7996b806b/5E1CE78A/t51.2885-15/e35/71080520_663570730806180_3641419934082284893_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" alt="">
+									<img src="https://scontent-arn2-2.cdninstagram.com/vp/a9b6d81e13a7d6ffa23c48c735f2fec5/5E44748A/t51.2885-15/e35/71080520_663570730806180_3641419934082284893_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" alt="">
 								</figure> 
 								<p></p> 
 							</div>
 						<div>
 							<a href="https://www.instagram.com/p/B3C6PriJ5nI/" 
-								target="_blank" class="links-page-list__item-link">
-								<strong>Комментировать</strong>
-								<span>Instagram</span>
+								onclick="ym(55778596, 'reachGoal', 'Instagram'); return true;"
+								target="_blank" class="links-page-btn shake"><strong>Комментировать</strong>&nbsp;<span>Instagram</span>
 							</a>
 						</div>
 
@@ -171,7 +196,7 @@
 									<div class="article-more__item-pic-blind">
 										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>4</span>
 									</div>
-									<img src="https://scontent-arn2-2.cdninstagram.com/vp/528c8df14502ef79326483a416d565eb/5E1AD49E/t51.2885-15/e35/s1080x1080/70964482_2379095635683656_737733389376358818_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=108" alt="Сертификат о прохождении обучения @akademiya_udrive">
+									<img src="https://scontent-arn2-2.cdninstagram.com/vp/72d1ddc66626b3807f5b0d2486c11eda/5E42619E/t51.2885-15/e35/s1080x1080/70964482_2379095635683656_737733389376358818_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=108" alt="Сертификат о прохождении обучения @akademiya_udrive">
 								</div>
 								<div class="article-more__item-name">Сертификат о прохождении обучения @akademiya_udrive</div>
 							</a>
@@ -243,18 +268,21 @@
 				<div class="banner__main-title">Свяжитесь с нами</div>
 				<div class="banner__main-row">
 					<a href="https://wa.me/79250908274" target="_blank" 
+					onclick="ym(55778596, 'reachGoal', 'WhatsApp'); return true;"
 					class="banner__main-item">
 						<div class="banner__main-item-ring"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
 						<div class="banner__main-item-txt">WhatsApp</div>
 					</a>
 
 					<a href="tg://resolve?domain=Avtormirov" target="_blank" 
+					onclick="ym(55778596, 'reachGoal', 'Telegram'); return true;"
 					class="banner__main-item">
 						<div class="banner__main-item-ring"><i class="fa fa-telegram" aria-hidden="true"></i></div>
 						<div class="banner__main-item-txt">Telegram</div>
 					</a>
 
 					<a href="viber://add?number=79250908274" target="_blank" 
+					onclick="ym(55778596, 'reachGoal', 'Viber'); return true;"
 					class="banner__main-item">
 						<div class="banner__main-item-ring"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
 						<div class="banner__main-item-txt">Viber</div>
@@ -262,6 +290,7 @@
 
 
 					<a href="https://www.instagram.com/sipsmos" target="_blank" 
+					onclick="ym(55778596, 'reachGoal', 'Instagram'); return true;"
 					class="banner__main-item">
 						<div class="banner__main-item-ring"><i class="fa fa-instagram" aria-hidden="true"></i></div>
 						<div class="banner__main-item-txt">Instagram</div>
@@ -271,11 +300,12 @@
 			</div>
 		</div>		
 	</div>
+	<!--swiper-->
+	<script src="../js/vendors/swiper.min.js"></script>
 	<!--jQuery-->
 	<script src="../js/vendors/jquery.min.js"></script>
-	<script src="../js/vendors/jquery.loadScroll.js"></script>
-	<!--device-->
-	<script src="../js/vendors/slick.min.js"></script>
+	<!--lazyloadxt-->
+	<script src="../js/vendors/jquery.lazyloadxt.js"></script>
 	<!--init-->
 	<script src="../js/jquery.init.js"></script>
 	<!--my scripts-->
