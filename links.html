@@ -161,7 +161,11 @@
 					</div>
 
 					<div class="links-page-list">
+
+
 						<div class="links-page-title">Каталог программ СИПС</div>
+
+
 
 
 
@@ -180,6 +184,8 @@
 
 
 
+
+
 						<a href="https://юдрайв.рф" class="links-page-btn-pic" style="
 "
 							target="_blank"
@@ -194,6 +200,8 @@
 
 
 
+
+
 						<a href="https://sipsmos.ru/posts/sips-priglashaet-na-avtorskiy-kurs-ekateriny.html" class="links-page-btn-pic" style="
 "
 							target="_blank"
@@ -205,6 +213,8 @@
 								</div>
 							</img>
 						</a>
+
+
 
 
 
@@ -237,6 +247,8 @@
 
 
 
+
+
 						<a href="https://sipsmos.ru/posts/spetsialist-vostrebovannoy-internet.html" class="links-page-btn-pic" style="
 "
 							target="_blank"
@@ -250,7 +262,11 @@
 						</a>
 
 
+
+
 						<div class="links-page-title">Наши услуги:</div>
+
+
 
 
 
@@ -259,6 +275,8 @@
 							<center><img src="./img/photo_2019-10-24_01-20-34.jpg" alt="">
 							</img></center>
 						</div>
+
+
 
 
 
@@ -274,6 +292,8 @@
 
 
 
+
+
 						<a href="https://sipsmos.ru/posts/deyatel-nost--po-montazhux-tekhnicheskomu.html" class="links-page-btn " style="
 " 
 						target="_blank"
@@ -283,6 +303,8 @@
 								Аутсорсинг ПБ
 							</strong>
 						</a>
+
+
 
 
 
@@ -298,6 +320,8 @@
 
 
 
+
+
 						<a href="https://sipsmos.ru/posts/deyatel-nost--po-montazhux-tekhnicheskomu.html" class="links-page-btn " style="
 " 
 						target="_blank"
@@ -307,6 +331,8 @@
 								Комплект документов ПБ
 							</strong>
 						</a>
+
+
 
 
 
@@ -322,7 +348,11 @@
 						</a>
 
 
+
+
 						<div class="links-page-title">Документы</div>
+
+
 
 
 
@@ -334,13 +364,19 @@
 
 
 
+
+
 						<div class="links-page-btn-pic">
 							<center><img src="./img/photo_2019-10-24_01-20-48.jpg" alt="">
 							</img></center>
 						</div>
 
 
+
+
 						<div class="links-page-title">Отзывы</div>
+
+
 
 
 
@@ -370,7 +406,11 @@
 						</div>
 
 
+
+
 						<div class="links-page-title">Контакты</div>
+
+
 
 
 
@@ -391,6 +431,8 @@
 								</div>
 							</div>
 						</div>
+
+
 
 
 
@@ -424,5 +466,44 @@
 	<script src="js/jquery.init.js"></script>
 	<!--my scripts-->
 	<script src="js/jquery.main.js"></script>
+
+    <script type="text/javascript">
+function getFormData($form){
+    var unindexed_array = $form.serializeArray();
+    var indexed_array = {};
+
+    $.map(unindexed_array, function(n, i){
+        indexed_array[n['name']] = n['value'];
+    });
+
+    return indexed_array;
+}
+
+$(document).ready(function(){
+    $('form').submit(function(){
+	event.preventDefault(); //prevent default action 
+
+	var contact = $(this).find('input[name="contact"]').val();
+	if (!contact) return false;
+
+	var post_url = $(this).attr("action"); //get form action url
+	var request_method = $(this).attr("method"); //get form GET/POST method
+	var form_data = JSON.stringify(getFormData($(this)));
+
+	var form = $(this);
+	$.ajax({
+		url : post_url,
+		type: request_method,
+                contentType: 'application/json',
+		data : form_data
+	}).done(function(response){
+	}).fail(function(){
+	});
+
+        return false;
+    });
+});
+    </script>
+
 </body>
 </html>
